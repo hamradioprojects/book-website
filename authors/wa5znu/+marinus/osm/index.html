@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OSM Tiler Generator</title>
+    <link rel="stylesheet" type="text/css" href="/styles/green.css" />
+    <style type="text/css">
+      body { font-family: Arial,Helvetica,Sans-Serif; }
+    </style>
+    <script type="text/javascript">
+      function calculate_zoom() {
+      zoom = (document.getElementById('form').zoom.value).trim();
+	lonlat = qra_lonlat(document.getElementById('form').grid.value.trim());
+	var lat = parseFloat(document.getElementById('form').lat.value.trim());
+	n = parseInt(document.getElementById('form').n.value);
+	var s=(6372798.2*2*Math.PI)*Math.cos(lat * (Math.PI / 180))/Math.pow(2, parseInt(zoom)+8);
+	zoom_output.value = zoom;
+	if (s) {
+	  meters_output.value = Math.round(s*10)/10;
+	  width_meters.value = Math.round(s * 128);
+	  height_meters.value = Math.round(s * 160);
+	  n_output_1.value = n;
+	  n_output_2.value = n;
+	  total_width_meters.value = Math.round(n * Math.round(s * 128)/ 100)/10;
+	  total_height_meters.value = Math.round(n * Math.round(s * 160) / 100)/10;
+        } else {
+	  meters_output.value = '?';
+	  width_meters.value = '?';
+	  height_meters.value = '?'
+	  n_output_1.value = '?';
+	  n_output_2.value = '?';
+        }
+       }
+
+     function qra_lonlat(qra) {
+       c1 = parseInt(qra.charAt(0), 36) - 10;           // C
+       c2 = parseInt(qra.charAt(1), 36) - 10;           // M
+       c3 = parseInt(qra.charAt(2), 10);                // 8
+       c4 = parseInt(qra.charAt(3), 10);                // 7
+       c5 = parseInt(qra.charAt(4), 36) - 10;           // w
+       c6 = parseInt(qra.charAt(5), 36) - 10;           // k
+       c7 = parseInt(qra.charAt(6), 10) || 0;           // 6
+       c8 = parseInt(qra.charAt(7), 10) || 0;           // 2
+       c9 = (parseInt(qra.charAt(8), 36) - 10) || 0;    // e
+       c10 = (parseInt(qra.charAt(9), 36) - 10) || 0;  // w
+     
+       lon = (c1 * 10) + (c3 * 1) + (c5 / 24.0) + (c7 / 240.0) + (c9 / 5760.0);
+
+       lat = (c2 * 10) + (c4 * 1) + (c6 / 24.0) + (c8 / 240.0) + (c10 / 5760.0);
+       lat = lat - 90;
+       lon = (lon * 2) - 180;
+
+       document.getElementById('form').lat.value = lat;
+       document.getElementById('form').lon.value = lon;
+       document.getElementById('download-button').disabled = '';
+//       if (c1 && c2 && c3 && c4 && c5 && c6) {
+//         document.getElementById('form').lat.value = lat;
+//         document.getElementById('form').lon.value = lon;
+//	 if (c8 && c9 && c10) {
+//             document.getElementById('download-button').disabled = '';
+//	 } else {
+//             document.getElementById('download-button').disabled = 'disabled';
+//	 }
+//       } else {
+//         document.getElementById('form').lat.value = '?';
+//         document.getElementById('form').lon.value = '?';
+//         document.getElementById('download-button').disabled = 'disabled';
+//       }
+      }     
+     
+    </script>
+  </head>
+
+  <body>
+    <h1>OSM Tile Generator for Marinus</h1>
+    <h2>Leigh, WA5ZNU</h2>
+
+    <div class="main">This page is generates Open Street Map tiles to download for use with the Arduino <a href="..">Marinus</a> APRS Project from the ARRL book <cite>Ham Radio for Arduino and Picaxe</cite>.<br />The source code for the Map generator is <a href="../code">available</a>.</div>
+
+
+    <br />
+
+    <div class="main">
+    <h2>Instructions</h2>
+    <ol>
+      <li>Type in the 10-digit grid square for the map center.</li>
+      <li>Download the Zip file and unzip it to the top level of your SD card.</li>
+    </ol>
+    <p>
+      If you don't know your 10-digit grid square:
+    </p>
+    <ol>
+      <li>Visit ES1PUMP's Google Maps-based site at <a target="_blank" href="http://no.nonsense.ee/qthmap/">http://no.nonsense.ee/qthmap/</a></li>
+      <li>Zoom in until you can see individual houses or structures</li>
+      <li>Click to get a 10-character grid square.</li>
+    </ol>
+
+    <form action="OSM/tile.cgi" method="get" id='form'>
+      <fieldset>
+	<legend>Download</legend>
+	<p>
+	  <label for="grid">Ten-digit Grid Square: </label>
+	  <input type="text" name="grid" onkeyup="calculate_zoom()" />
+	</p>
+	<p>
+	  <label for="n">Map Tiles (number of LCD Screens): </label>
+	  <select name="n" onchange="calculate_zoom()">
+	    <option value="3">3x3</option>
+	    <option value="5" selected="selected">5x5</option>
+	    <option value="7">7x7</option>
+	    <option value="9">9x9</option>
+	    <option value="11">11x11</option>
+	    <option value="15">15x15</option>
+	    <option value="17">17x17</option>
+	    <option value="19">19x19</option>
+	  </select>
+	</p>
+	<p>
+	  <label for="lat">Latitude: </label>
+	  <output type="text" name="lat" readonly="true">?</output>
+	</p>
+	<p>
+	  <label for="lat">Longitude: </label>
+	  <output type="text" name="lon" readonly="true">?</output>
+	</p>
+	<p>
+	  <label for="zoom">Zoom Level </label>
+	  <input type="range" min="1" max="18" name="zoom" value="14" onchange="calculate_zoom()" />
+	  <output id="zoom_output">14</output>
+	</p>
+	<ul>
+	  <li><output id="meters_output">?</output> meters per pixel.</li>
+	<li>Each LCD screen is <output id="width_meters">?</output> meters x <output id="height_meters">?</output> meters.</li>
+	<li>All <output id="n_output_1">?</output>x<output id="n_output_2">?</output> screens together cover <output id="total_width_meters">?</output> km x <output id="total_height_meters">?</output> km.</li>
+	</ul>
+	<p>
+	  <input id="download-button" disabled="disabled" type="submit" value="Download Zip" />
+	</p>
+
+      </fieldset>
+    </form>
+    </div>
+    
+    <br />
+
+    <div class="main">
+    <h2>Download Software</h2>
+    <ul>
+      <li><a href="../code">Arduino sketch and Python program</a></li>
+    </ul>
+
+    </div>
+    <br />
+
+    <div class="main">
+    <h2>License</h2>
+    <ul>
+      <li>Arduino sketch and Python program released under MIT license:<br />
+      <a href="http://www.opensource.org/licenses/mit-license">http://www.opensource.org/licenses/mit-license</a>
+      </li>
+      <li>Map data, imagery and map information provided by MapQuest, Open Street Map and contributors, CC-BY-SA:<br />
+      <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a><br />
+      <a href="http://www.mapquest.com/">http://www.mapquest.com/</a><br />
+      <a href="http://creativecommons.org/licenses/by-sa/2.0">http://creativecommons.org/licenses/by-sa/2.0</a><br />
+      </li>
+      <li>Tiles Courtesy of <a href='http://www.mapquest.com/' target='_blank'>MapQuest</a> <img src='http://developer.mapquest.com/content/osm/mq_logo.png' alt="Tiles Courtesy of MapQuest"/></li>
+    </ul>
+    </div>
+    <hr />
+    <address>
+      <a href="..">Marinus</a>
+    </address>
+  </body>
+</html>

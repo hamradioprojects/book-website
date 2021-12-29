@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 25 March 2009), see www.w3.org" />
+<title>An APRS Data Logger</title>
+<meta http-equiv="Content-Type" content=
+"text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="date" content="" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="/styles/green.css" />
+
+</head>
+<body>
+<div class="main">
+
+<h1 class="title">An APRS Data Logger</h1>
+<div id="michael-d.-pechner-ne6rd">
+<h1>Michael D. Pechner, NE6RD</h1>
+<div class="header-image"><img src=
+"cropped-flying-home-to-byron.jpg" /></div>
+<ul>
+<li>
+<p>Source code for this project<br />
+<a href=
+"/authors/ne6rd/+timber/code">http://hamradioprojects.com/authors/ne6rd/+timber/code</a></p>
+</li>
+<li>
+<p>Bay Area Sky Diving<br />
+<a href=
+"http://www.bayareaskydiving.com/">http://www.bayareaskydiving.com/</a></p>
+</li>
+<li>
+<p>Arduino Wire library for I2C/TWI devices such as the SD card
+shield<br />
+<a href=
+"http://arduino.cc/it/Reference/Wire">http://arduino.cc/en/Reference/Wire</a></p>
+</li>
+<li>
+<p>SparkFun Micro SD Card Shield<br />
+<a href=
+"http://www.sparkfun.com/products/9802">http://www.sparkfun.com/products/9802</a></p>
+</li>
+<li>
+<p>Jameco Electronics<br />
+<a href="http:/jameco.com">http:/jameco.com</a></p>
+</li>
+<li>
+<p>APRS Information<br />
+<a href="http://aprs.org">http://aprs.org</a><br />
+<a href=
+"http://aprs.org/doc/APRS101.PDF">http://aprs.org/doc/APRS101.PDF</a></p>
+</li>
+<li>Google Earth<br />
+<a href=
+"http://www.google.com/earth/">http://www.google.com/earth/</a></li>
+<li>
+<p>Google Earth KML Reference<br />
+<a href=
+"http://code.google.com/apis/kml/documentation/">http://code.google.com/apis/kml/documentation/</a></p>
+</li>
+<li>
+<p>Google KML <code>lookat</code><br />
+<a href=
+"http://code.google.com/apis/kml/documentation/kmlreference.html#lookat">
+http://code.google.com/apis/kml/documentation/kmlreference.html#lookat</a></p>
+</li>
+<li>
+<p>Python programming language for Windows, Linux, and Mac<br />
+<a href="http://python.org">http://python.org</a></p>
+</li>
+<li>
+<p>Python Beginners Guide<br />
+<a href=
+"http://wiki.python.org/moin/BeginnersGuide">http://wiki.python.org/moin/BeginnersGuide</a></p>
+</li>
+<li>
+<p>Python for non-programmers<br />
+<a href=
+"http://wiki.python.org/moin/BeginnersGuide/NonProgrammers">http://wiki.python.org/moin/BeginnersGuide/NonProgrammers</a></p>
+</li>
+<li>
+<p>Parachute Mobile Talk, SF Bay Area Maker Faire 2010<br />
+<a href=
+"http://fora.tv/2010/05/22/Parachute_Mobile_Taking_Ham_Radio_to_New_Heights">
+http://fora.tv/2010/05/22/Parachute_Mobile_Taking_Ham_Radio_to_New_Heights</a></p>
+</li>
+<li>
+<p>Pacificon<br />
+<a href=
+"http://www.pacificon.org/">http://www.pacificon.org/</a></p>
+</li>
+</ul>
+<div id="component-list">
+<h2>Component List</h2>
+<ul>
+<li>
+<p>Arduino<br />
+Arduino Uno, Duemilanove or any other standard-sized Arduino with
+an Atmega 328.</p>
+</li>
+<li>
+<p>Argent Data Systems RadioShield<br />
+<a href=
+"https://www.argentdata.com/catalog/product_info.php?products_id=136">
+https://www.argentdata.com/catalog/product_info.php?products_id=136</a></p>
+</li>
+<li>
+<p>Argent Data Yaesu cable<br />
+<a href=
+"https://www.argentdata.com/catalog/product_info.php?products_id=68">
+https://www.argentdata.com/catalog/product_info.php?products_id=68</a></p>
+</li>
+<li>
+<p>Arduino Stackable Header Kit<br />
+Buy one set for each shield used.<br />
+<a href=
+"http://www.sparkfun.com/products/10007">http://www.sparkfun.com/products/10007</a><br />
+
+<a href=
+"http://www.adafruit.com/products/85">http://www.adafruit.com/products/85</a></p>
+</li>
+<li>
+<p>Sparkfun Micro SD Shield<br />
+<a href=
+"http://www.sparkfun.com/products/9802">http://www.sparkfun.com/products/9802</a></p>
+</li>
+<li>
+<p>A 16x2 5V LCD<br />
+You can use a parallel LCD attached via a ribbon cable to the
+Argent RadioShield:<br />
+<a href=
+"http://www.sparkfun.com/products/255">http://www.sparkfun.com/products/255</a><br />
+
+<a href=
+"http://www.pololu.com/catalog/product/773">http://www.pololu.com/catalog/product/773</a></p>
+</li>
+<li>
+<p>16 conductor Ribbon Cable with 8x2 0.1" on one end.<br />
+<a href=
+"http://www.pololu.com/catalog/product/973">http://www.pololu.com/catalog/product/973</a></p>
+</li>
+<li>
+<p>Argent Data Radio Shield<br />
+<a href=
+"http://wiki.argentdata.com/index.php?title=Radio_Shield">http://wiki.argentdata.com/index.php?title=Radio_Shield</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div id="license">
+<h1>License</h1>
+<ul>
+<li>
+<p>This main sketch is distributed under the terms of the MIT
+License<br />
+<a href=
+"http://www.opensource.org/licenses/mit-license">http://www.opensource.org/licenses/mit-license</a>.</p>
+</li>
+<li>
+<p>The schematics and hardware design are licensed under CC-BY-SA
+3.0:<br />
+<a href=
+"http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a></p>
+</li>
+</ul>
+<div class="oshw-footer-image"><img src="oshw-logo-100-px.png" alt=
+"oshw-logo–100-px.png" /></div>
+</div>
+</div>
+
+</body>
+</html>

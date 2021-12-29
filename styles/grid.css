@@ -1,0 +1,5 @@
+body {
+    font-family: Consolas, Arial, Helvetica, Sans-serif; 
+    background-image: url('/styles/grid.png');
+    margin-left:10pt;
+}

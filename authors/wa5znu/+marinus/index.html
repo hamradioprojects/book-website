@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 25 March 2009), see www.w3.org" />
+<meta http-equiv="Content-Type" content=
+"text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="generator" content="pandoc" />
+<title>Marinus: An APRS Display</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="/styles/green.css" />
+
+</head>
+<body>
+<div class="bookicon"><a href="http://www.arrl.org/shop/Ham-Radio-for-Arduino-and-PICAXE/"><img src="/styles/coversmall.png" alt="Ham Radio for Arduino and Picaxe (c) 2013 ARRL" /></a></div>
+<div class="main">
+
+<div id="header">
+<h1 class="title">Marinus: An APRS Display</h1>
+</div>
+<h1>Leigh L. Klotz, Jr., WA5ZNU</h1>
+<div class="header-image"><img src="marinus-and-ht1-small.jpg" /></div>
+<ul>
+<li>
+<p>Source code for this project<br />
+<a href=
+"/authors/wa5znu/+marinus/code">http://hamradioprojects.com/authors/wa5znu/+marinus/code</a></p>
+</li>
+<li>
+<p>Online Open Street Map Tile Generator for Marinus<br />
+<a href=
+"/authors/wa5znu/+marinus/osm">http://hamradioprojects.com/authors/wa5znu/+marinus/osm</a></p>
+</li>
+<li>
+<p>Marinus of Tyre<br />
+<a href=
+"http://en.wikipedia.org/wiki/Marinus_of_Tyre">http://en.wikipedia.org/wiki/Marinus_of_Tyre</a><br />
+
+<a href=
+"http://www.encyclopedia.com/doc/1G2-2830905894.html">http://www.encyclopedia.com/doc/1G2-2830905894.html</a></p>
+</li>
+<li>
+<p>Equirectangular_projection<br />
+<a href=
+"http://en.wikipedia.org/wiki/Equirectangular_projection">http://en.wikipedia.org/wiki/Equirectangular_projection</a></p>
+</li>
+<li>
+<p>Maidenhead Grid<br />
+<a href=
+"http://www.arrl.org/grid-squares">http://www.arrl.org/grid-squares</a>
+<a href=
+"http://en.wikipedia.org/wiki/Maidenhead_Locator_System">http://en.wikipedia.org/wiki/Maidenhead_Locator_System</a></p>
+</li>
+<li>
+<p>Maidenhead Grid Map (10 digits)<br />
+<a href=
+"http://no.nonsense.ee/qthmap/">http://no.nonsense.ee/qthmap/</a></p>
+</li>
+<li>
+<p>APRS and Online Maps<br />
+<a href=
+"http://www.g4ilo.com/aprs.html">http://www.g4ilo.com/aprs.html</a></p>
+</li>
+<li>
+<p>APRS.FI Presentation<br />
+<a href=
+"http://aprs.fi/doc/presentations/20080614-nordic-vushf-sappee/aprsfi-20080614-sappee-nordic-vushf.pdf">
+http://aprs.fi/doc/presentations/20080614-nordic-vushf-sappee/aprsfi-20080614-sappee-nordic-vushf.pdf</a></p>
+</li>
+<li>
+<p>Xastir Open Source APRS<br />
+<a href="http://www.xastir.org">http://www.xastir.org</a></p>
+</li>
+<li>
+<p>UIView<br />
+<a href=
+"http://www.wa8lmf.net/aprs/UIview_Notes.htm">http://www.wa8lmf.net/aprs/UIview_Notes.htm</a></p>
+</li>
+<li>
+<p>Open Street Map and Crowdsourcing<br />
+<a href=
+"http://arstechnica.com/information-technology/2010/06/crowd-sourced-world-map/">
+http://arstechnica.com/information-technology/2010/06/crowd-sourced-world-map/</a></p>
+</li>
+<li>
+<p>Open Street Map<br />
+<a href=
+"http://www.openstreetmap.org">http://www.openstreetmap.org</a></p>
+</li>
+<li>Adafruit 1.8" 18-bit Color TFT Shield w/microSD and
+Joystick<br />
+<a href=
+"http://www.adafruit.com/products/802">http://www.adafruit.com/products/802</a><br />
+</li>
+<li>
+<p>Adafruit TFT Shield Tutorial<br />
+<a href=
+"http://www.ladyada.net/products/18tftbreakout/">http://www.ladyada.net/products/18tftbreakout/</a></p>
+</li>
+<li>
+<p>Adafruit Graphics Tutorial<br />
+<a href=
+"http://www.ladyada.net/wiki/tutorials/gfx">http://www.ladyada.net/wiki/tutorials/gfx</a></p>
+</li>
+<li>
+<p>Adafruit ST7735 LCD Library<br />
+<a href=
+"https://github.com/adafruit/Adafruit-ST7735-Library">https://github.com/adafruit/Adafruit-ST7735-Library</a></p>
+</li>
+<li>
+<p>BMP File Format<br />
+<a href=
+"http://www.fileformat.info/format/bmp/egff.htm">http://www.fileformat.info/format/bmp/egff.htm</a></p>
+</li>
+<li>
+<p>Mapquest OSM<br />
+<a href=
+"http://wiki.openstreetmap.org/wiki/Mapquest#MapQuest-hosted_map_tiles">
+http://wiki.openstreetmap.org/wiki/Mapquest#MapQuest-hosted_map_tiles</a></p>
+</li>
+<li>
+<p>Mapquest OSM Tiles<br />
+Tiles Courtesy of http://www.mapquest.com<br />
+<a href=
+"http://wiki.openstreetmap.org/wiki/Mapquest#Tile_URLs">http://wiki.openstreetmap.org/wiki/Mapquest#Tile_URLs</a>
+<a href=
+"http://wiki.openstreetmap.org/wiki/Mapquest#MapQuest-hosted_map_tiles">
+http://wiki.openstreetmap.org/wiki/Mapquest#MapQuest-hosted_map_tiles</a></p>
+</li>
+<li>
+<p>APRS Packet Parser in Perl<br />
+<a href=
+"http://search.cpan.org/dist/Ham-APRS-FAP/">http://search.cpan.org/dist/Ham-APRS-FAP/</a></p>
+</li>
+<li>
+<p>APRS Packet Parser in C<br />
+<a href=
+"http://pakettiradio.net/libfap/">http://pakettiradio.net/libfap/</a></p>
+</li>
+<li>
+<p>K6DBG MIC-E Decoder in Perl<br />
+<a href=
+"http://www.tapr.org/pipermail/aprssig/2005-April/005709.html">http://www.tapr.org/pipermail/aprssig/2005-April/005709.html</a></p>
+</li>
+<li>
+<p>Arduino Stream functions<br />
+<a href=
+"http://arduino.cc/en/Reference/StreamReadBytesUntil">http://arduino.cc/en/Reference/StreamReadBytesUntil</a><br />
+
+<a href=
+"http://arduino.cc/en/Reference/StreamParseInt">http://arduino.cc/en/Reference/StreamParseInt</a></p>
+</li>
+<li>
+<p>GNU Image Manipulation Program<br />
+<a href="http://www.gimp.org/">http://www.gimp.org/</a></p>
+</li>
+<li>
+<p>PAARA (Palo Alto Amateur Radio Association)<br />
+<a href="http://www.paara.org/">http://www.paara.org/</a></p>
+</li>
+<li>
+<p>Python Programming Language<br />
+<a href="http://python.org">http://python.org</a></p>
+</li>
+<li>
+<p>Python Imaging Library<br />
+<a href=
+"http://www.pythonware.com/library/pil/handbook/introduction.htm">http://www.pythonware.com/library/pil/handbook/introduction.htm</a></p>
+</li>
+</ul>
+<h1 id="license">License</h1>
+<ul>
+<li>Arduino sketch and Python program released under MIT
+license<br />
+<a href=
+"http://www.opensource.org/licenses/mit-license">http://www.opensource.org/licenses/mit-license</a></li>
+<li>Map data, imagery and map information provided by MapQuest,
+Open Street Map and contributors, CC-BY-SA:<br />
+<a href=
+"http://www.openstreetmap.org/">http://www.openstreetmap.org/</a><br />
+
+<a href=
+"http://www.mapquest.com/">http://www.mapquest.com/</a><br />
+<a href=
+"http://creativecommons.org/licenses/by-sa/2.0">http://creativecommons.org/licenses/by-sa/2.0</a><br />
+</li>
+</ul>
+</div>
+
+</body>
+</html>

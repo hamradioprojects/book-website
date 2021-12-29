@@ -1,0 +1,6 @@
+% Airgate: A Receive-Only, Low-Power APRS iGate 
+# Markus Heller, DL8RDS
+
+<div class="header-image">
+![](arduino-stack-color-small.jpg)
+</div>

@@ -1,0 +1,27 @@
+body { margin-left: 5%; margin-right: 5%; margin-top: 5%; margin-bottom: 5%; text-align: justify; font-size: medium; }
+
+code { font-family: monospace; }
+h1,h2,h3,h4,h5,h6 { text-align: left; }
+h1.title { }
+h2.author { }
+
+.oshw-footer-image img { height : 1in; }
+
+div.figure { border: 1px solid black; }
+div.sidebar { margin-left: 0.25in; margin-right: 0.25in; background-color: #c0c0c0; }
+.sidebar-image img { height : 3in; float: right;}
+.header-image img { height : 3in; }
+.single-figure-image img { width: 100%; }
+.qr-image img {float:right }
+
+.shield-stack-images img { height : 3in; }
+
+pre.sourceCode  { border: 1px solid black; padding-left: 0.1in; padding-top: 0.1in; }
+.sourceCode .co { font-style: italic; color: magenta; }
+.sourceCode .dt { color: green; }	/*type*/
+.sourceCode .dv { color: blue; }	/*values*/
+.sourceCode .er { color: red; }
+.sourceCode .kw { color: green; }  /*keyword*/
+.sourceCode .ot { color: blue; } /*#define*/
+.sourceCode .st { color: orange; } /*string*/
+.sourceCode .ch { color: orange; } /*char*/

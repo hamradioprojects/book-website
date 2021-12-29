@@ -1,0 +1,16 @@
+//------------------------------------------------------------------------------------
+// Rename this file into ArgentLCD.ino to use the Argent Data RadioShield parallel LCD
+//------------------------------------------------------------------------------------
+
+#define lcd argentRadioShield
+
+void lcdbegin() {
+  lcd.begin();
+  lcd.setcontrast(1023);
+  lcdclear();
+}
+
+void lcdcolor(byte color) {
+}
+
+#include "LineWrap.h"

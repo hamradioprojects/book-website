@@ -1,0 +1,2 @@
+lcd_width,lcd_height,QRA,zoom,POI_TL_LAT,POI_TL_LON,DEGREES_PER_PIXEL_LAT,DEGREES_PER_PIXEL_LON,MAP_WIDTH_IN_TILES,MAP_HEIGHT_IN_TILES
+%d,%d,%s,%d,%d,%d,%d,%d,%d,%d

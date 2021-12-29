@@ -1,0 +1,12 @@
+body { margin-left: 5%; margin-right: 5%; margin-top: 5%; margin-bottom: 5%; text-align: justify; font-size: medium; }
+body { width: 7in; }
+code { font-family: monospace; }
+h1,h2,h3,h4,h5,h6 { text-align: center; }
+h1.title { }
+h2.author { }
+
+div.figure { border: 1px solid black; }
+div.sidebar { margin-left: 0.25in; margin-right: 0.25in; background-color: #c0c0c0; }
+.sidebar-image img { height : 3in; float: right;}
+.header-image img { height : 3in; }
+.qr-image img {float:right; width: 1.5in; }

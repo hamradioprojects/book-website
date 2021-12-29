@@ -1,0 +1,19 @@
+//--------------------------------------------------------------------
+// Save this file as DFRobotLCD.ino to use the DFRobot LCDKeypad Shield
+//--------------------------------------------------------------------
+
+#include <LiquidCrystal.h>
+#include <LCDKeypad.h>
+
+LCDKeypad lcd;
+
+void lcdbegin() {
+  lcd.begin(16, 2);
+  lcd.backlight(64);
+  lcdclear();
+}
+
+void lcdcolor(byte color) {
+}
+
+#include "LineWrap.h"

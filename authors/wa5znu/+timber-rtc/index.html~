@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 25 March 2009), see www.w3.org" />
+<title>Customizing the DataLogger</title>
+<meta http-equiv="Content-Type" content=
+"text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="date" content="" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="/styles/green.css" />
+
+</head>
+<body>
+<div class="bookicon"><a href="http://www.arrl.org/shop/Ham-Radio-for-Arduino-and-PICAXE/"><img src="/styles/coversmall.png" alt="Ham Radio for Arduino and Picaxe (c) 2013 ARRL" /></a></div>
+<div class="main">
+
+<h1 class="title">Customizing the DataLogger</h1>
+<div id="leigh-l.-klotz-jr.-wa5znu">
+<h1>Leigh L. Klotz, Jr. WA5ZNU</h1>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><img src="wa5znu-lcd-shield-stack-small.jpg" alt=
+"wa5znu-lcd-shield-stack-small.jpg" /></td>
+<td align="left"><img src="wa5znu-logger-small.jpg" alt=
+"wa5znu-logger-small.jpg" /></td>
+<td align="left"><img src="wa5znu-shield-pin-header-small.jpg" alt=
+"wa5znu-shield-pin-header-small.jpg" /></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><img src="rgblcd-small.jpg" alt=
+"rgblcd-small.jpg" /></td>
+<td align="left"><img src="shield-stack-back-small.jpg" alt=
+"shield-stack-back-small.jpg" /></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Source code for this version of the Timber project<br />
+<a href=
+"/authors/wa5znu/+timber-rtc/code">http://hamradioprojects.com/authors/wa5znu/+timber-rtc/code</a></p>
+</li>
+<li>
+<p>Argent Radio Shield Library<br />
+<a href=
+"/authors/wa5znu/+ARS/ArgentRadioShield.zip">http://hamradioprojects.com/authors/wa5znu/+ARS/ArgentRadioShield.zip</a></p>
+</li>
+<li>
+<p>Adafruit RGBLCD Shield and Library<br />
+<a href=
+"http://www.ladyada.net/make/logshield/index.html">http://www.ladyada.net/make/logshield</a></p>
+</li>
+<li>
+<p>AdaFruit SD Card + RTC Shield<br />
+<a href=
+"http://www.adafruit.com/products/716">http://www.adafruit.com/products/716</a></p>
+</li>
+<li>
+<p>DFRobot LCDKeypad Shield<br />
+<a href=
+"http://www.dfrobot.com/index.php?route=product/product&amp;product_id=51">
+http://www.dfrobot.com/index.php?route=product/product&amp;product_id=51</a></p>
+</li>
+<li>
+<p>DFRobot LCDKeypad Library<br />
+<a href=
+"/authors/wa5znu/+LCDShields/code/LCDKeypad.zip">http://hamradioprojects.com/authors/wa5znu/+LCDShields/code/LCDKeypad.zip</a></p>
+</li>
+<li>
+<p>Adafruit Logging Shield with SD and Real-Time Clock and
+Library<br />
+<a href=
+"http://www.adafruit.com/products/243">http://www.adafruit.com/products/243</a></p>
+</li>
+</ul>
+</div>
+<div id="license">
+<h1>License</h1>
+<ul>
+<li>This sketch is distributed under the terms of the MIT
+License<br />
+<a href=
+"http://www.opensource.org/licenses/mit-license">http://www.opensource.org/licenses/mit-license</a>.</li>
+</ul>
+</div>
+</div>
+
+</body>
+</html>

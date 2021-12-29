@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 25 March 2009), see www.w3.org" />
+<meta http-equiv="Content-Type" content=
+"text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="generator" content="pandoc" />
+<title>Airgate: A Receive-Only, Low-Power APRS iGate</title>
+<link rel="stylesheet" href="/styles/green.css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+<div class="bookicon"><a href="http://www.arrl.org/shop/Ham-Radio-for-Arduino-and-PICAXE/"><img src="/styles/coversmall.png" alt="Ham Radio for Arduino and Picaxe (c) 2013 ARRL" /></a></div>
+<div class="main">
+<div id="header">
+<h1 class="title">Airgate: A Receive-Only, Low-Power APRS
+iGate</h1>
+</div>
+<h1 id="markus-heller-dl8rds">Markus Heller, DL8RDS</h1>
+<div class="header-image"><img src=
+"arduino-stack-color-small.jpg" /></div>
+<ul>
+<li>Project Source Code<br />
+<a href=
+"/authors/dl8rds/+airgate/code">http://hamradioprojects.com/authors/dl8rds/+airgate/code</a></li>
+<li>Inspiration<br />
+I was inspired by <a href=
+"http://www.botanicalls.com">http://www.botanicalls.com</a> where
+an Arduino sends twitter messages about the thirstiness of
+flowers.</li>
+<li>YouTube Video<br />
+I describe the ArgentData RadioShield, in German:<br />
+<a href=
+"http://www.youtube.com/watch?v=SuR8mAFtHw8">http://www.youtube.com/watch?v=SuR8mAFtHw8</a></li>
+<li>Source code for this project<br />
+<a href=
+"http://cookbook.wa5znu.org/projects/airgate">http://cookbook.wa5znu.org/projects/airgate</a></li>
+<li>Argent Data Radio Shield<br />
+<a href=
+"http://wiki.argentdata.com/index.php?title=Radio_Shield">http://wiki.argentdata.com/index.php?title=Radio_Shield</a></li>
+<li>APRS Information<br />
+<a href="http://aprs.org">http://aprs.org</a><br />
+<a href=
+"http://aprs.org/doc/APRS101.PDF">http://aprs.org/doc/APRS101.PDF</a></li>
+<li>APRS Tier2 Network<br />
+<a href="http://www.aprs2.net/">http://www.aprs2.net</a></li>
+<li>APRS Protocols<br />
+<a href=
+"http://www.aprs.net/vm/DOS/PROTOCOL.HTM">http://www.aprs.net/vm/DOS/PROTOCOL.HTM</a></li>
+<li>Connecting to APRS-IS<br />
+<a href=
+"http://www.aprs-is.net/Connecting.aspx">http://www.aprs-is.net/Connecting.aspx</a></li>
+<li>APRS iGate Properties<br />
+<a href=
+"http://wiki.ham.fi/APRS_iGate_properties">http://wiki.ham.fi/APRS_iGate_properties</a></li>
+<li>AX.25<br />
+<a href=
+"http://en.wikipedia.org/wiki/AX.25">http://en.wikipedia.org/wiki/AX.25</a></li>
+<li>APRS.fi<br />
+<a href="http://aprs.fi">http://aprs.fi</a></li>
+<li>Python programming language for Windows, Linux, and Mac<br />
+<a href="http://python.org">http://python.org</a></li>
+<li>Python TCP and UDP Sockets<br />
+<a href=
+"http://docs.python.org/howto/sockets.html">http://docs.python.org/howto/sockets.html</a></li>
+<li>PHG Calculator<br />
+<a href=
+"http://www.aprsfl.net/phgr.php">http://www.aprsfl.net/phgr.php</a></li>
+<li>Python Beginners Guide<br />
+<a href=
+"http://wiki.python.org/moin/BeginnersGuide">http://wiki.python.org/moin/BeginnersGuide</a></li>
+<li>Python for non-programmers<br />
+<a href=
+"http://wiki.python.org/moin/BeginnersGuide/NonProgrammers">http://wiki.python.org/moin/BeginnersGuide/NonProgrammers</a></li>
+<li>Arduino Ethernet Library<br />
+<a href=
+"http://arduino.cc/en/Reference/Ethernet">http://arduino.cc/en/Reference/Ethernet</a></li>
+<li>SparkFun Ethernet Pro<br />
+<a href=
+"http://www.sparkfun.com/products/10536">http://www.sparkfun.com/products/10536</a></li>
+<li>Arduino Uno Ethernet<br />
+<a href=
+"https://www.adafruit.com/products/418">https://www.adafruit.com/products/418</a></li>
+<li>NRX1 FM Receiver Module (order 144.39 MHz for US)<br />
+<a href=
+"http://www.lemosint.com/radiometrix/radiometrix_details.php?itemID=212">
+http://www.lemosint.com/radiometrix/radiometrix_details.php?itemID=212</a></li>
+<li>APRS-IS Send-only Ports<br />
+<a href=
+"http://www.aprs-is.net/SendOnlyPorts.aspx">http://www.aprs-is.net/SendOnlyPorts.aspx</a></li>
+<li>Internet Protocol UDP<br />
+<a href=
+"http://en.wikipedia.org/wiki/User_Datagram_Protocol">http://en.wikipedia.org/wiki/User_Datagram_Protocol</a></li>
+<li>Internet Protocol TCP<br />
+<a href=
+"http://en.wikipedia.org/wiki/Transmission_Control_Protocol">http://en.wikipedia.org/wiki/Transmission_Control_Protocol</a></li>
+<li>Stacking Headers<br />
+These are a popular item and you can add them to your order from
+just about any popular Arduino supplier:
+<ul>
+<li>Evil Mad Science: <a href=
+"http://evilmadscience.com/productsmenu/partsmenu/251">http://evilmadscience.com/productsmenu/partsmenu/251</a></li>
+<li>Sparkfun: <a href=
+"http://www.sparkfun.com/products/10007">http://www.sparkfun.com/products/10007</a></li>
+<li>Jameco: <a href=
+"http://www.jameco.com">http://www.jameco.com</a></li>
+<li>Adafruit: <a href=
+"http://www.adafruit.com/products/85">http://www.adafruit.com/products/85</a></li>
+</ul>
+</li>
+<li>FTDI Cable or breakout board for programming the integrated
+Ethernet Arduino
+<ul>
+<li><a href=
+"http://www.sparkfun.com/products/9717">http://www.sparkfun.com/products/9717</a></li>
+<li><a href=
+"http://www.adafruit.com/products/70">http://www.adafruit.com/products/70</a></li>
+<li>
+[http://www.jameco.com/webapp/wcs/stores/servlet/Product_10001_10001_2152243<em>-1](http://www.jameco.com/webapp/wcs/stores/servlet/Product_10001_10001_2152243</em>-1)</li>
+<li><a href=
+"http://jeelabs.com/products/usb-bub">http://jeelabs.com/products/usb-bub</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="license">License</h1>
+<p>The Arduino sketch in this project is made available under the
+MIT License:<br />
+<a href=
+"http://www.opensource.org/licenses/mit-license">http://www.opensource.org/licenses/mit-license</a></p>
+</div>
+</body>
+</html>

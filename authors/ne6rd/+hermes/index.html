@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 25 March 2009), see www.w3.org" />
+<title>Hermes APRS Messenger</title>
+<meta http-equiv="Content-Type" content=
+"text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="date" content="" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="/styles/green.css" />
+
+</head>
+<body>
+<div class="bookicon"><a href="http://www.arrl.org/shop/Ham-Radio-for-Arduino-and-PICAXE/"><img src="/styles/coversmall.png" alt="Ham Radio for Arduino and Picaxe (c) 2013 ARRL" /></a></div>
+<div class="main">
+
+<h1 class="title">Hermes APRS Messenger</h1>
+<div id="michael-pechner-ne6rd">
+<h2>Michael Pechner NE6RD</h2>
+<div class="header-image"><img src="hermes-small.jpg" alt=
+"hermes-small.jpg" /></div>
+<ul>
+<li>Source code for this project<br />
+<a href=
+"/authors/ne6rd/+hermes/code">http://hamradioprojects.com/authors/ne6rd/+hermes/code</a><br />
+</li>
+</ul>
+</div>
+<div id="libraries">
+<h2>Libraries</h2>
+<ul>
+<li>
+<p>PS/2 Keyboard Library<br />
+I modified this library to add symbols for more keys.<br />
+<a href=
+"http://www.arduino.cc/playground/Main/PS2Keyboard">http://www.arduino.cc/playground/Main/PS2Keyboard</a><br />
+
+The original is from the Teensy developer:<br />
+<a href=
+"http://www.pjrc.com/teensy/td_libs_PS2Keyboard.html">http://www.pjrc.com/teensy/td_libs_PS2Keyboard.html</a></p>
+</li>
+<li>NE6RD PS/2 Additions<br />
+My modified version of PS2Keyboard is available for download
+here<br />
+<a href=
+"/authors/ne6rd/+hermes/code">http://hamradioprojects.com/authors/ne6rd/+hermes/code</a><br />
+</li>
+<li>
+<p>New Haven Displays 4x20 LCD Library<br />
+<a href=
+"http://arduino.cc/playground/Code/LCDi2c">http://arduino.cc/playground/Code/LCDi2c</a></p>
+</li>
+<li>Adafruit I2C/SPI Library<br />
+For the Adafruit I2C LCD Backpack:<br />
+<a href=
+"http://www.ladyada.net/products/i2cspilcdbackpack/">http://www.ladyada.net/products/i2cspilcdbackpack/</a><br />
+
+Install the modified LiquidCrystal library:<br />
+<a href=
+"https://github.com/adafruit/LiquidCrystal">https://github.com/adafruit/LiquidCrystal</a><br />
+</li>
+</ul>
+</div>
+<div id="components">
+<h2>Components</h2>
+<ul>
+<li>
+<p>Argent Data Systems Radio Shield<br />
+Build the Radio Shield as in the <em>Timber</em> project.<br />
+<a href=
+"https://www.argentdata.com/catalog/product_info.php?products_id=136">
+https://www.argentdata.com/catalog/product_info.php?products_id=136</a></p>
+</li>
+<li>
+<p>Argent Data Yaesu cable<br />
+<a href=
+"https://www.argentdata.com/catalog/product_info.php?products_id=68">
+https://www.argentdata.com/catalog/product_info.php?products_id=68</a></p>
+</li>
+<li>
+<p>LCD Choice 1:<br />
+New Haven Displays 4x20 5V I2C Serial LCD<br />
+<a href=
+"http://www.newhavendisplay.com/index.php?main_page=product_info&amp;products_id=922">
+http://www.newhavendisplay.com/index.php?main_page=product_info&amp;products_id=922</a><br />
+
+<a href=
+"https://www.jameco.com/webapp/wcs/stores/servlet/Product_10001_10001_2118686_-1">
+https://www.jameco.com/webapp/wcs/stores/servlet/Product_10001_10001<em>2118686</em>–1</a></p>
+</li>
+<li>
+<p>LCD Choice 2:<br />
+Adafruit I2C/SPI LCD Backpack:<br />
+<a href=
+"http://www.adafruit.com/products/292">http://www.adafruit.com/products/292</a><br />
+
+Adafruit 4x20 Display:<br />
+<a href=
+"http://www.adafruit.com/products/198">http://www.adafruit.com/products/198</a></p>
+</li>
+<li>PS/2 Connector<br />
+<a href=
+"http://www.adafruit.com/products/804">http://www.adafruit.com/products/804</a><br />
+
+<a href=
+"http://www.sparkfun.com/products/8509">http://www.sparkfun.com/products/8509</a><br />
+
+<a href=
+"http://www.sparkfun.com/products/8651">http://www.sparkfun.com/products/8651</a><br />
+
+<a href=
+"https://www.jameco.com/Jameco/Products/ProdDS/2111441.pdf">https://www.jameco.com/Jameco/Products/ProdDS/2111441.pdf</a><br />
+</li>
+<li>
+<p>PS/2 Keyboard<br />
+US English</p>
+</li>
+<li>
+<p>Arduino header set<br />
+<a href=
+"http://www.sparkfun.com/products/10007">http://www.sparkfun.com/products/10007</a></p>
+</li>
+<li>
+<p>22 Gauge wire in multiple colors or male-male jumper cables</p>
+</li>
+<li>
+<p>Small breadboard or PCB board<br />
+<a href=
+"http://www.sparkfun.com/products/7916">http://www.sparkfun.com/products/7916</a></p>
+</li>
+<li>
+<p>Machined Male and Female Headers<br />
+<a href=
+"http://www.sparkfun.com/products/743">http://www.sparkfun.com/products/743</a><br />
+
+<a href=
+"http://www.sparkfun.com/products/117%20optional">http://www.sparkfun.com/products/117
+optional</a></p>
+</li>
+</ul>
+</div>
+<div id="license">
+<h1>License</h1>
+<ul>
+<li>
+<p>This main sketch is distributed under the terms of the MIT
+License<br />
+<a href=
+"http://www.opensource.org/licenses/mit-license">http://www.opensource.org/licenses/mit-license</a>.</p>
+</li>
+<li>
+<p>The schematics and hardware design are licensed under CC-BY-SA
+3.0:<br />
+<a href=
+"http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a></p>
+</li>
+<li>
+<p>The Teensy PS/2 Keyboard Driver is licensed under the GNU Lesser
+General Public License, v2.1, as are my modifications:<br />
+<a href=
+"http://www.gnu.org/licenses/lgpl-2.1.txt">http://www.gnu.org/licenses/lgpl–2.1.txt</a></p>
+</li>
+</ul>
+<div class="oshw-footer-image"><img src="oshw-logo-100-px.png" alt=
+"oshw-logo–100-px.png" /></div>
+</div>
+</div>
+
+</body>
+</html>

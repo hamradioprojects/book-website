@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 25 March 2009), see www.w3.org" />
+<meta http-equiv="Content-Type" content=
+"text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="generator" content="pandoc" />
+<title>Sweeper: An Arduino SWR Scanner</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="/styles/green.css" />
+
+</head>
+<body>
+<div class="main">
+
+<div id="header">
+<h1 class="title">Sweeper: An Arduino SWR Scanner</h1>
+</div>
+<h1 id="alan-biocca-w6akb">Alan Biocca, W6AKB</h1>
+<div class="header-image"><img src="sweeper-small.jpg" /></div>
+<h2 id="bill-of-materials">Bill of Materials</h2>
+<ul>
+<li>Arduino UNO board and development software<br />
+<a href="http://www.arduino.com">http://www.arduino.com</a></li>
+<li>USB cable, standard A to B type</li>
+<li>Main Prototyping board, Twin Industries 4” x 5” 8000-45<br />
+<a href="http://www.twinind.com">http://www.twinind.com</a></li>
+<li>SWR Detector prototyping board<br />
+<a href=
+"http://www.kitsandparts.com">http://www.kitsandparts.com</a></li>
+<li>Sparkfun Arduino ProtoShield kit<br />
+<a href="http://www.sparkfun.com">http://www.sparkfun.com</a></li>
+<li>LCD Keypad Shield v2.0<br />
+<a href=
+"http://www.emartee.com/product/42054/Arduino%20Keypad%20LCD%20Shield%20V2.0#tab1">
+http://www.emartee.com/product/42054/Arduino%20Keypad%20LCD%20Shield%20V2.0#tab1</a><br />
+</li>
+<li>DDS-60 RF synthesizer board<br />
+<a href="http://www.amqrp.or">http://www.amqrp.or</a></li>
+<li>Voltage regulator board<br />
+<a href=
+"http://www.kitsandparts.com">http://www.kitsandparts.com</a></li>
+<li>Rotary Encoder<br />
+<a href=
+"http://www.adafruit.com/products/377">http://www.adafruit.com/products/377</a></li>
+<li>PCB mount BNC connector<br />
+<a href="http://www.jameco.com">http://www.jameco.com</a>, <a href=
+"http://www.digikey.com">http://www.digikey.com</a></li>
+<li>Graphical Display<br />
+<a href=
+"http://www.sparkfun.com/products/936">http://www.sparkfun.com/products/936</a></li>
+</ul>
+<h2 id="swr-bridge-parts">SWR Bridge Parts</h2>
+<ul>
+<li>D1,2 - 1N34A or similar germanium signal diode OR</li>
+<li>1N5711, schottky signal diode OR</li>
+<li>1N914 or 1N4148, silicon signal diode</li>
+<li>note that both diodes should be the same type, see text for
+details</li>
+<li>R1,2 - 47, 49.9 or 51 ohm quarter watt non inductive resistors
+(both same value)</li>
+<li>R3,4 - 100 ohm quarter watt non inductive resistors</li>
+<li>R5,6 - 10K quarter watt resistors</li>
+<li>C1,2,3 - 10 nF 50-100V monolithic ceramic capacitors</li>
+<li>Prototyping board</li>
+<li>Right angle pin, single row, 8 pins long, 0.1” centers</li>
+</ul>
+<h2 id="pre-regulator-parts">Pre Regulator Parts</h2>
+<ul>
+<li>U1 LM7808 or LM7809 Regulator</li>
+<li>C4 47 uF 16VDC or higher</li>
+<li>C5,6 100 nF</li>
+<li>D3 1N4002</li>
+<li>UNO 9V Coaxial Power Plug</li>
+<li>12Vin Anderson Powerpole</li>
+</ul>
+<h2 id="other-parts">Other Parts</h2>
+<ul>
+<li>Misc connectors, pins, wire, 4-40 hardware, rubber feet</li>
+</ul>
+<h1 id="references">References</h1>
+<ul>
+<li>
+<p>Source code for this project<br />
+<a href=
+"/authors/w6akb/+sweeper/code">http://hamradioprojects.com/authors/w6akb/+sweeper/code</a></p>
+</li>
+<li>
+<p>Author’s Website<br />
+<a href="http://www.akbeng.com/">http://www.akbeng.com/</a></p>
+</li>
+<li>
+<p>Arduino<br />
+<a href=
+"http://arduino.cc/en/Guide/HomePage">http://arduino.cc/en/Guide/HomePage</a></p>
+</li>
+<li>
+<p>Buddipole<br />
+<a href="http://www.buddipole.com">http://www.buddipole.com</a></p>
+</li>
+<li>
+<p>DDS-60<br />
+<a href=
+"http://midnightdesignsolutions.com/dds60/index.html">http://midnightdesignsolutions.com/dds60/index.html</a></p>
+</li>
+<li>
+<p>Diodes in RF probe use<br />
+<a href=
+"http://www.cliftonlaboratories.com/diodes_for_rf_probes.htm">http://www.cliftonlaboratories.com/diodes_for_rf_probes.htm</a></p>
+</li>
+<li>
+<p>Resistive SWR Bridge<br />
+<a href=
+"http://ludens.cl/Electron/swr/swr.html">http://ludens.cl/Electron/swr/swr.html</a></p>
+</li>
+</ul>
+<h2 id="licensing">Licensing</h2>
+<p>This software is distributed under the terms of the GNU General
+Public License. This hardware is licensed under the Creative
+Commons Attribution Share Alike for Hardware license.</p>
+<h2 id="about-the-author">About the Author</h2>
+<p>Alan Biocca is an extra class amateur radio operator licensed
+since 1967. He has a bachelor’s degree in Electrical Engineering
+and a master’s degree in Computer Science from UC Berkeley. He
+works at Lawrence Berkeley National Laboratory where he manages
+software projects and leads the controls group at the Advanced
+Light Source. He is also known for the design and manufacture of
+Pneumatic Antenna Launchers (www.AntennaLaunchers.com) as well as
+the Triple Ratio Balun and the FDLog Field Day Logging Program.
+Alan’s other hobbies include hi-tech flashlights, photography and
+electric bicycles. He recently changed his callsign from WB6ZQZ to
+W6AKB. He can be reached via email addressed to W6AKB at ARRL.net
+or through his website at www.akbeng.com.</p>
+<h1 id="license">License</h1>
+<p>The Software sketches in this project are licensed under GPL
+3.0. <a href="COPYING.txt">COPYING</a></p>
+<p>The hardware design of this project is licensed under the
+CC-BY-SA 3.0 license:<br />
+<a href=
+"http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a></p>
+<div class="footer-image"><img src="oshw-logo-100-px.png" /></div>
+</div>
+
+</body>
+</html>

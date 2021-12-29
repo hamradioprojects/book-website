@@ -1,0 +1,19 @@
+/* http://www.publicdomainpictures.net/view-image.php?image=32791&picture=abstract-green-background 
+   thanks http://www.publicdomainpictures.net/browse-author.php?a=39225 */
+body { font-family: Helvetica, Arial, Sans-serif; background: url('abstract-green-background-1361187771Euk.jpg') }
+
+h2 { font-style: italic }
+div.center { text-align: center} 
+img.big-image { border: 1px solid black; margin-left: 60px; }
+hr { border-color: #1d7245; }
+h1,h2,h3 { color: #1d7245; }
+.main { width: 6in; background-color: #eee; margin-left: 1in; padding:1em; }
+.mains { width: 6in; background-color: #eee; margin-left: 1in; padding:1em; }
+ul.nav { background-color: #c7ebff; border: 1px solid #000000; padding-top: 13px; padding-bottom: 13px; list-style-type: none; }
+ul.nav > li { display: inline; }
+.notices { font-size: 8pt; }
+.notices ul { list-style-type: none; }
+
+div.bookicon { float: right }
+
+p.notice { color: red; font-weight: bold; }

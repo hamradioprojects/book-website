@@ -1,0 +1,15 @@
+/******************************************
+ * poi.h header file for %dx%d pixel LCD
+ * For map location %s zoom %d 
+ ******************************************/
+
+// Location of center tile upper left corner
+#define POI_TL_LAT %dL
+#define POI_TL_LON %dL
+
+#define DEGREES_PER_PIXEL_LAT (%d)
+#define DEGREES_PER_PIXEL_LON (%d)
+
+#define MAP_WIDTH_IN_TILES (%d)
+#define MAP_HEIGHT_IN_TILES (%d)
+
